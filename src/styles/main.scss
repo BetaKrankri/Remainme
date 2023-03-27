@@ -1,2 +1,7 @@
 @import './base/reset';
 @import './base/base';
+
+
+// Components Styles
+@import '../components/ListNav/ListNav.scss';
+@import '../components/TaskBoard/TaskBoard.scss';
