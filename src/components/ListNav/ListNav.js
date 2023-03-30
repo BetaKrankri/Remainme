@@ -1,31 +1,20 @@
+import ListButton from "./components/ListButton/ListButton";
+import NewList from "./components/NewList/NewList";
+
 function ListNav(props) {
     return (
         <div className='ListNav'>
             <div className='Body'>
-                <div className='ListButton'>
-                    <div className='icon'></div>
-                    <div className='label'>Nombre de lista</div>
-                </div>
-                <div className='ListButton'>
-                    <div className='icon'></div>
-                    <div className='label'>Nombre de lista</div>
-                </div>
-                <div className='ListButton'>
-                    <div className='icon'></div>
-                    <div className='label'>Nombre de lista</div>
-                </div>
-                <div className='ListButton'>
-                    <div className='icon'></div>
-                    <div className='label'>Nombre de lista</div>
-                </div>
+
+                <ListButton />
+                <ListButton />
+                <ListButton />
+                <ListButton />
 
             </div>
 
             <div className='Footer'>
-                <div className='NewTask'>
-                    <div className='icon'></div>
-                    <input className='' type='text' />
-                </div>
+                <NewList />
             </div>
         </div>
     );
