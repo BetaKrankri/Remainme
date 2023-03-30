@@ -1,11 +1,11 @@
- .ListButton {
-     display: flex;
-     align-items: center;
-     gap: 1rem;
+.ListButton {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 
-     .icon {
-         background-color: blue;
-         min-width: 30px;
-         min-height: 30px;
-     }
- }
+    .icon {
+        background-color: blue;
+        min-width: 30px;
+        min-height: 30px;
+    }
+}

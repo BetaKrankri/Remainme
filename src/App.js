@@ -22,10 +22,12 @@ function App() {
     }]);
 
   function getListNames() {
+    // Regresa una arreglo con los nombres de las listas 
     return data.map(list => list.listName);
   }
 
   function getTasksFromList(listName) {
+
     const foundList = data.find(list => list.listName === listName);
     return foundList ? foundList.taskList : [];
   }
@@ -40,7 +42,7 @@ function App() {
 
   return (
     <div className="App">
-      <ListNav />
+      <ListNav listNames={getListNames()} />
       <TaskBoard />
       {/* <div className='TaskDetails'></div> */}
     </div>
