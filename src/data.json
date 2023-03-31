@@ -1,0 +1,42 @@
+[
+    {
+        "listName": "Tareas",
+        "taskList": [
+            {
+                "title": "Primer Rocordatorio",
+                "isDone": false,
+                "isStarred": true,
+                "dateCreation": "mañana"
+            },
+            {
+                "title": "Segundo Rocordatorio",
+                "isDone": true,
+                "isStarred": true,
+                "dateCreation": "hoy"
+            }
+        ]
+    },
+    {
+        "listName": "Lista de colores",
+        "taskList": [
+            {
+                "title": "Azul",
+                "isDone": true,
+                "isStarred": true,
+                "dateCreation": "mañana"
+            },
+            {
+                "title": "Morado",
+                "isDone": true,
+                "isStarred": true,
+                "dateCreation": "hoy"
+            },
+            {
+                "title": "Verde",
+                "isDone": false,
+                "isStarred": false,
+                "dateCreation": "hoy"
+            }
+        ]
+    }
+]
