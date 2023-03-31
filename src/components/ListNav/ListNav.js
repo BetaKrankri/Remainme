@@ -1,5 +1,6 @@
-import ListButton from "./components/ListButton/ListButton";
-import NewList from "./components/NewList/NewList";
+import ListButton from "./ListButton/ListButton";
+import NewItem from '../NewItem/NewItem';
+
 
 function ListNav({ listNames }) {
 
@@ -8,14 +9,14 @@ function ListNav({ listNames }) {
         <div className='ListNav'>
             <div className='Body'>
                 {listNames.map((listName, i) =>
-                    <ListButton label={listName} key={i}/>
+                    <ListButton label={listName} key={i} />
 
                 )}
 
             </div>
 
             <div className='Footer'>
-                <NewList />
+                <NewItem onAdd={() => {}} />
             </div>
         </div>
     );
