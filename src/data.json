@@ -6,13 +6,13 @@
                 "title": "Primer Rocordatorio",
                 "isDone": false,
                 "isStarred": true,
-                "dateCreation": "mañana"
+                "creationDate": "Fri Mar 31 2023 19:37:31 GMT-0600 (hora estándar central)"
             },
             {
                 "title": "Segundo Rocordatorio",
                 "isDone": true,
                 "isStarred": true,
-                "dateCreation": "hoy"
+                "creationDate": "Fri Mar 31 2023 19:10:31 GMT-0600 (hora estándar central)"
             }
         ]
     },
@@ -23,19 +23,19 @@
                 "title": "Azul",
                 "isDone": true,
                 "isStarred": true,
-                "dateCreation": "mañana"
+                "creationDate": "Fri Mar 31 2023 12:27:31 GMT-0600 (hora estándar central)"
             },
             {
                 "title": "Morado",
                 "isDone": true,
                 "isStarred": true,
-                "dateCreation": "hoy"
+                "creationDate": "Fri Mar 31 2023 12:11:31 GMT-0600 (hora estándar central)"
             },
             {
                 "title": "Verde",
                 "isDone": false,
                 "isStarred": false,
-                "dateCreation": "hoy"
+                "creationDate": "Fri Mar 31 2023 15:37:31 GMT-0600 (hora estándar central)"
             }
         ]
     }
