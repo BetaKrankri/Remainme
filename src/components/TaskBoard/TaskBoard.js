@@ -5,10 +5,21 @@ import Task from "./Task/Task";
 
 
 function TaskBoard() {
-    const { currentList, tasks} = useContext(DataContext);
+    const { currentList, tasks, setTasks} = useContext(DataContext);
 
     // guarda la lista actual de tasks en ´currentList´
     let tasksInCurrentList = tasks.filter(task => task.listName === currentList);
+
+    function addNewTask(newTaskTitle) {
+        setTasks(prev => [...prev, {
+            title: newTaskTitle,
+            isDone: false,
+            isStarred: false,
+            listName: currentList,
+            creationDate: new Date(),
+        }]);
+    }
+
 
 
     return (
@@ -25,7 +36,7 @@ function TaskBoard() {
             </div>
 
             <div className='Footer'>
-                <NewItem />
+                <NewItem onAdd={addNewTask}/>
             </div>
 
         </div >
