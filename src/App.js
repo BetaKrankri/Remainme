@@ -8,7 +8,7 @@ import fetchedData from './data.json';
 function App() {
 
   return (
-    <DataProvider tasksBD={fetchedData} >
+    <DataProvider data={fetchedData} >
       <div className="App">
         <ListNav />
         <TaskBoard />

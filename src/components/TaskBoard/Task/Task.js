@@ -2,17 +2,21 @@ import { useContext } from "react";
 import { DataContext } from "../../../DataContext";
 
 function Task({ task }) {
-    const { setData } = useContext(DataContext);
+    const { setTasks } = useContext(DataContext);
 
-    function handleDoneCheckbox(e) {
-        console.log('isDone Clicked')
+    function handleChange(e) {
+        const attributeName = e.target.name;
+        setTasks(prevTasks => prevTasks.map(pTask => {
+            if (pTask.creationDate === task.creationDate) {
+                return {
+                    ...pTask,
+                    [attributeName]: !pTask[attributeName]
+                };
+            } else {
+                return pTask;
+            }
+        }))
     }
-    
-    function handleStarredCheckbox() { 
-        console.log('isStarred Clicked')
-    }
-
-
 
     return (
         <div className='Task'>
@@ -20,7 +24,7 @@ function Task({ task }) {
                 className='isDone'
                 name='isDone'
                 checked={task.isDone}
-                onClick={handleDoneCheckbox}
+                onChange={handleChange}
             />
             <div className='Info'>
                 <div className='Title'>{task.title}</div>
@@ -30,7 +34,7 @@ function Task({ task }) {
                 className='isStarred'
                 name='isStarred'
                 checked={task.isStarred}
-                onClick={handleStarredCheckbox}
+                onChange={handleChange}
             />
         </div>
     );

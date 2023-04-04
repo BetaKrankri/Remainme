@@ -2,14 +2,21 @@ import React, { createContext, useState } from "react";
 
 export const DataContext = createContext();
 
-export function DataProvider({ children, tasksBD }) {
+export function DataProvider({ children, data }) {
 
-  const [data, setData] = useState(tasksBD);
+  //Para mostrar toda la informacion
+  const [tasks, setTasks] = useState(data.tasks);
+  const [lists, setLists] = useState(data.lists);
+  //Para mostrar la lista actual en la vusta de taskboard
   const [currentList, setCurrentList] = useState('Tareas');
 
   return (
     <DataContext.Provider
-      value={{ data, setData, currentList, setCurrentList }}
+      value={{
+        tasks, setTasks,
+        lists, setLists,
+        currentList, setCurrentList
+      }}
     >
       {children}
     </DataContext.Provider>

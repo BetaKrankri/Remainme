@@ -6,25 +6,16 @@ import NewItem from '../NewItem/NewItem';
 
 
 function ListNav() {
-    const { data, setData } = useContext(DataContext);
+    const { lists, setLists } = useContext(DataContext);
 
-    const listNames = data.map(task => task.listName)
-        .filter((name, index, names) => names.indexOf(name) === index);
-
-
-    function addNewList(listName) {
-        setData(prev =>
-            [...prev, {
-                listName,
-                taskList: []
-            }]
-        )
+    function addNewList(newListName) {
+        setLists(prev => [...prev, newListName])
     }
 
     return (
         <div className='ListNav'>
             <div className='Body'>
-                {listNames.map((listName, i) =>
+                {lists.map((listName, i) =>
                     <ListButton label={listName} key={i} />
                 )}
             </div>

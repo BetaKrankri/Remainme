@@ -5,10 +5,11 @@ import Task from "./Task/Task";
 
 
 function TaskBoard() {
-    const { currentList, data } = useContext(DataContext);
+    const { currentList, tasks} = useContext(DataContext);
 
-    let currentTaskList = []
-    currentTaskList = data.filter(list => list.listName === currentList);
+    // guarda la lista actual de tasks en ´currentList´
+    let tasksInCurrentList = tasks.filter(task => task.listName === currentList);
+
 
     return (
         <div className='TaskBoard'>
@@ -19,7 +20,7 @@ function TaskBoard() {
             </div>
 
             <div className='Body'>
-                {currentTaskList.map((task, i) =>
+                {tasksInCurrentList.map((task, i) =>
                     <Task task={task} key={task.creationDate} />)}
             </div>
 
