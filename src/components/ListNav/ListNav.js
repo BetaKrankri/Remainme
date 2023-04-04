@@ -7,12 +7,15 @@ import NewItem from '../NewItem/NewItem';
 
 function ListNav() {
     const { data, setData } = useContext(DataContext);
-    let listNames = data.map(item => item.listName);
 
-    function addNewList (listName) {
-        setData(prev => 
+    const listNames = data.map(task => task.listName)
+        .filter((name, index, names) => names.indexOf(name) === index);
+
+
+    function addNewList(listName) {
+        setData(prev =>
             [...prev, {
-                listName, 
+                listName,
                 taskList: []
             }]
         )
