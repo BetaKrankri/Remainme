@@ -40,7 +40,7 @@ function TaskBoard() {
             </div>
 
             <div className='Footer'>
-                <NewItem onAdd={addNewTask}/>
+                <NewItem onAdd={addNewTask} placeholder='Agregar tarea'/>
             </div>
 
         </div >

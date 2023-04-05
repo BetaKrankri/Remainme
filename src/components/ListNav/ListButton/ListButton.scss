@@ -4,8 +4,12 @@
     justify-content: space-between;
     gap: 10px;
     padding: .5rem .875rem;
-
     border-radius: 5px;
+
+    &,
+    &>* {
+        transition: all ease-in .05s;
+    }
 
     .button-icon {
         font-size: 1.25rem;
@@ -23,14 +27,11 @@
     .button-icon {
         // color: blue;
     }
-    background-color:hsl(30, 100%, 25%);
-    
+
+    background-color:hsl(30, 0%, 13%);
+
 }
 
 .ListButton.selected {
-    background-color:hsl(0, 0%, 30%);
-}
-
-.ListButton, .ListButton>* {
-    transition: all ease-in .2s;
+    background-color: hsl(0, 0%, 15%);
 }

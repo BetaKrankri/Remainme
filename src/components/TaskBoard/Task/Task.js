@@ -24,7 +24,7 @@ function Task({ task }) {
                 name='isDone'
                 onChange={handleCheckboxChange} />
             <div className='Info'>
-                <div className='Title'>{task.title}</div>
+                <div className={`Title ${task.isDone ? 'done' : ''}`}>{task.title}</div>
                 {/* <div className='Extra'></div> */}
             </div>
             <CheckBox isChecked={task.isStarred}

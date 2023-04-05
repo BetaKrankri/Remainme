@@ -6,7 +6,11 @@
     gap: 1rem;
 
     border-radius: 5px;
+    transition: all .05s ease-in-out;
     
+    &.selected{
+        background-color: hsl(0, 0%, 15%)
+    }
 
 
     .Info {
@@ -14,5 +18,13 @@
         display: flex;
         flex-direction: column;
         gap: .5rem;
+
+        .Title.done {
+            text-decoration: line-through;
+        }
     }
+}
+
+.Task:hover {
+    background-color: hsl(0, 0%, 13%);
 }

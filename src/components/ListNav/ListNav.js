@@ -21,7 +21,7 @@ function ListNav() {
             </div>
 
             <div className='Footer'>
-                <NewItem onAdd={addNewList} />
+                <NewItem onAdd={addNewList} placeholder={'Agregar Lista'}/>
             </div>
         </div>
     );
