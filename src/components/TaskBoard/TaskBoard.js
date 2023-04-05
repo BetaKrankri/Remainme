@@ -3,6 +3,9 @@ import { DataContext } from "../../DataContext";
 import NewItem from "../NewItem/NewItem";
 import Task from "./Task/Task";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
+
 
 function TaskBoard() {
     const { currentList, tasks, setTasks} = useContext(DataContext);
@@ -26,8 +29,9 @@ function TaskBoard() {
         <div className='TaskBoard'>
 
             <div className='Header'>
-                <div className='icon'></div>
+                <FontAwesomeIcon icon={faBars} className="button-icon"/>
                 <div className='label'>{currentList}</div>
+                {/* Agregar opcion de menu */}
             </div>
 
             <div className='Body'>

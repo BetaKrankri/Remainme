@@ -1,8 +1,13 @@
 .Task {
-    background-color: hsl(0, 0%, 18%);
-    padding: .3rem .5rem;
+    background-color: hsl(0, 0%, 10%);
+    padding: .8rem 1rem;
     display: flex;
+    align-items: center;
     gap: 1rem;
+
+    border-radius: 5px;
+    
+
 
     .Info {
         flex: 1;
