@@ -1,13 +1,15 @@
 import { useState } from 'react';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
+
 
 function NewItem({ onAdd }) {
     const [inputText, setInputText] = useState('');
 
     return (
         <div className='NewItem'>
-            <div
-                className='icon'
+            <FontAwesomeIcon icon={faPlus} className='button-icon button'
                 onClick={() => {
                     // TODO: Verificar que no se encuentra ya el nombre en la lista.
                     const trimmedInput = inputText.trim();
@@ -16,8 +18,8 @@ function NewItem({ onAdd }) {
                     }
                     setInputText('');
                 }}
-            >Add</div>
-            <input
+            />
+            < input
                 value={inputText}
                 className=''
                 type='text'

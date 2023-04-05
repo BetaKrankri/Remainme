@@ -8,4 +8,27 @@
         min-width: 30px;
         min-height: 30px;
     }
+
+    .button-icon {
+        font-size: 1.25rem;
+    }
+
+}
+
+.ListButton:hover {
+    cursor: pointer;
+
+    .button-icon {
+        // color: blue;
+    }
+    background-color:hsl(30, 100%, 25%);
+    
+}
+
+.ListButton.selected {
+    background-color:hsl(30, 100%, 20%);
+}
+
+.ListButton, .ListButton>* {
+    transition: all ease-in .2s;
 }

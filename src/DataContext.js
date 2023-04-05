@@ -7,7 +7,10 @@ export function DataProvider({ children, data }) {
   //Para mostrar toda la informacion
   const [tasks, setTasks] = useState(data.tasks);
   const [lists, setLists] = useState(data.lists);
+
+
   //Para mostrar la lista actual en la vusta de taskboard
+  //*Podria pasarse a App */
   const [currentList, setCurrentList] = useState('Tareas');
 
   return (
