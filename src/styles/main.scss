@@ -1,3 +1,4 @@
+@import './base/variables';
 @import './base/reset';
 @import './base/base';
 
@@ -10,3 +11,4 @@
 @import '../components/NewItem/NewItem.scss';
 @import '../components/TaskBoard/Task/Task.scss';
 @import '../components/TaskBoard/Task/Checkbox/CheckBox.scss';
+@import '../components/ListNav/ToggleButton/ToggleButton.scss';

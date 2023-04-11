@@ -9,7 +9,7 @@ export function DataProvider({ children, data }) {
   const [lists, setLists] = useState(data.lists);
 
 
-  //Para mostrar la lista actual en la vusta de taskboard
+  //Para mostrar la lista actual en la vista de taskboard
   //*Podria pasarse a App */
   const [currentList, setCurrentList] = useState('Tareas');
 
@@ -18,7 +18,7 @@ export function DataProvider({ children, data }) {
       value={{
         tasks, setTasks,
         lists, setLists,
-        currentList, setCurrentList
+        currentList, setCurrentList,
       }}
     >
       {children}

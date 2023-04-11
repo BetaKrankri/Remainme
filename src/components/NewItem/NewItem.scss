@@ -8,18 +8,19 @@
     gap: 1rem;
     transition: all .1s ease-in-out;
 
-    &:focus-within{
+    &:hover {
+        border: solid 1px hsl(0, 0%, 70%);
+        transition: border-color 0.2s;
+    }
+
+    &:focus-within {
         border: solid 1px hsl(0, 0%, 100%);
     }
 
-    .icon {
-        background-color: blue;
-        min-width: 30px;
-        min-height: 30px;
-    }
 
     input[type=text] {
         all: unset;
+        min-width: 10px;
         flex: 1;
         border: none;
         min-width: none;
@@ -27,9 +28,6 @@
         color: white;
         font-family: 'Roboto', monospace;
         font-size: 1rem;
-    }
-    input[type=text]:focus{
-
     }
 
     .button-icon:hover {

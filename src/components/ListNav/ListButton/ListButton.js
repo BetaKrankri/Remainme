@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { DataContext } from "../../../DataContext";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faListUl } from '@fortawesome/free-solid-svg-icons';
 
 
 function ListButton({ label }) {
@@ -11,12 +11,12 @@ function ListButton({ label }) {
     const isSelected = currentList === label;
 
     return (
-        <div 
-        className={`ListButton button ${isSelected ? 'selected' : ''}`}
+        <div
+            className={`ListButton button ${isSelected ? 'selected' : ''}`}
             onClick={() => {
                 setCurrentList(label)
             }}>
-            <FontAwesomeIcon icon={faBars} className="button-icon"/>
+            <FontAwesomeIcon icon={faListUl} className="button-icon" />
             <div className='label'>{label}</div>
         </div>
     );
