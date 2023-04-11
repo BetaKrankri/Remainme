@@ -3,7 +3,6 @@ import { DataContext } from "../../DataContext";
 import NewItem from "../NewItem/NewItem";
 import Task from "./Task/Task";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ToggleButton from '../ListNav/ToggleButton/ToggleButton';
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 

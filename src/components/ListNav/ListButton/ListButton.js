@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { DataContext } from "../../../DataContext";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faListUl } from '@fortawesome/free-solid-svg-icons';
+import { faListUl } from '@fortawesome/free-solid-svg-icons';
 
 
 function ListButton({ label }) {
