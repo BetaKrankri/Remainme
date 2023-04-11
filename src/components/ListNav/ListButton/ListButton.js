@@ -1,16 +1,22 @@
 import { useContext } from "react";
 import { DataContext } from "../../../DataContext";
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars, faListUl } from '@fortawesome/free-solid-svg-icons';
+
+
 function ListButton({ label }) {
-    const { setCurrentList } = useContext(DataContext);
+    const { setCurrentList, currentList } = useContext(DataContext);
+
+    const isSelected = currentList === label;
 
     return (
         <div
-            className='ListButton'
+            className={`ListButton button ${isSelected ? 'selected' : ''}`}
             onClick={() => {
                 setCurrentList(label)
             }}>
-            <div className='icon'></div>
+            <FontAwesomeIcon icon={faListUl} className="button-icon" />
             <div className='label'>{label}</div>
         </div>
     );

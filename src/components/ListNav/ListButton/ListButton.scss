@@ -1,11 +1,37 @@
 .ListButton {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    justify-content: space-between;
+    gap: 10px;
+    padding: .5rem .875rem;
+    border-radius: 5px;
 
-    .icon {
-        background-color: blue;
-        min-width: 30px;
-        min-height: 30px;
+    &,
+    &>* {
+        transition: all ease-in .05s;
     }
+
+    .button-icon {
+        font-size: 1.25rem;
+    }
+
+    .label {
+        flex: 1;
+    }
+
+}
+
+.ListButton:hover {
+    cursor: pointer;
+
+    .button-icon {
+        // color: blue;
+    }
+
+    background-color:hsl(30, 0%, 13%);
+
+}
+
+.ListButton.selected {
+    background-color: hsl(0, 0%, 15%);
 }

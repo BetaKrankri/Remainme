@@ -3,9 +3,13 @@ import { DataContext } from "../../DataContext";
 import NewItem from "../NewItem/NewItem";
 import Task from "./Task/Task";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import ToggleButton from '../ListNav/ToggleButton/ToggleButton';
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
-function TaskBoard() {
-    const { currentList, tasks, setTasks} = useContext(DataContext);
+
+function TaskBoard({ setIsListNavOpen }) {
+    const { currentList, tasks, setTasks } = useContext(DataContext);
 
     // guarda la lista actual de tasks en ´currentList´
     let tasksInCurrentList = tasks.filter(task => task.listName === currentList);
@@ -24,10 +28,14 @@ function TaskBoard() {
 
     return (
         <div className='TaskBoard'>
-
             <div className='Header'>
-                <div className='icon'></div>
+                <ToggleButton icon={faBars}
+                    onClick={() => {
+                        setIsListNavOpen(prev => !prev)
+                    }}
+                />
                 <div className='label'>{currentList}</div>
+                {/* Agregar opcion de menu */}
             </div>
 
             <div className='Body'>
@@ -36,10 +44,11 @@ function TaskBoard() {
             </div>
 
             <div className='Footer'>
-                <NewItem onAdd={addNewTask}/>
+                <NewItem onAdd={addNewTask} placeholder='Agregar tarea' />
             </div>
-
+           
         </div >
+
     );
 }
 

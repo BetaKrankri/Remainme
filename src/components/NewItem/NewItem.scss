@@ -1,18 +1,36 @@
 .NewItem {
     background-color: hsl(0, 0%, 18%);
-    padding: .3rem .5rem;
+    border: solid 1px hsl(0, 0%, 18%);
+    border-radius: 5px;
+    padding: .5rem 1rem;
     display: flex;
+    align-items: center;
     gap: 1rem;
+    transition: all .1s ease-in-out;
 
-    .icon {
-        background-color: blue;
-        min-width: 30px;
-        min-height: 30px;
+    &:hover {
+        border: solid 1px hsl(0, 0%, 70%);
+        transition: border-color 0.2s;
     }
 
-    input {
+    &:focus-within {
+        border: solid 1px hsl(0, 0%, 100%);
+    }
+
+
+    input[type=text] {
+        all: unset;
+        min-width: 10px;
         flex: 1;
+        border: none;
         min-width: none;
+        background-color: hsl(0, 0%, 18%);
+        color: white;
+        font-family: 'Roboto', monospace;
+        font-size: 1rem;
     }
 
+    .button-icon:hover {
+        cursor: pointer;
+    }
 }

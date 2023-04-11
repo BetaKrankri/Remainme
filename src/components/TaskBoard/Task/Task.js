@@ -1,11 +1,11 @@
 import { useContext } from "react";
 import { DataContext } from "../../../DataContext";
+import CheckBox from "./Checkbox/CheckBox";
 
 function Task({ task }) {
     const { setTasks } = useContext(DataContext);
 
-    function handleChange(e) {
-        const attributeName = e.target.name;
+    function handleCheckboxChange(attributeName) {
         setTasks(prevTasks => prevTasks.map(pTask => {
             if (pTask.creationDate === task.creationDate) {
                 return {
@@ -20,22 +20,16 @@ function Task({ task }) {
 
     return (
         <div className='Task'>
-            <input type='checkbox'
-                className='isDone'
+            <CheckBox isChecked={task.isDone}
                 name='isDone'
-                checked={task.isDone}
-                onChange={handleChange}
-            />
+                onChange={handleCheckboxChange} />
             <div className='Info'>
-                <div className='Title'>{task.title}</div>
-                <div className='Extra'></div>
+                <div className={`Title ${task.isDone ? 'done' : ''}`}>{task.title}</div>
+                {/* <div className='Extra'></div> */}
             </div>
-            <input type='checkbox'
-                className='isStarred'
+            <CheckBox isChecked={task.isStarred}
                 name='isStarred'
-                checked={task.isStarred}
-                onChange={handleChange}
-            />
+                onChange={handleCheckboxChange} />
         </div>
     );
 }

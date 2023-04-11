@@ -1,0 +1,12 @@
+.CheckBox {
+    font-size: 1rem;
+    transition: .1s ease-in-out color;
+}
+.CheckBox:hover {
+    cursor: pointer;
+    color: hsl(0,0%, 85%);
+}
+
+.CheckBox:active {
+    color:hsl(0,0%, 75%);
+}
